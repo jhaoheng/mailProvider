@@ -19,7 +19,15 @@ $app->get('/hello', function() use ($app){
 						"mailType" : "index",
     					"mailViewArg" : {"text" : "Hi , this is a default set"}
     				}
-	- curl -X POST http://{url}/mail/default/send
+	- curl -X POST -H "authmailprovider : test" -d '{
+	    "company" : "default",
+	    "emails" : [
+	        "xxxxxx@gmail.com"
+	    ],
+	    "mailType" : "index",
+	    "mailViewArg" : {
+	        "text" : "Hi , this is a default set"
+	    } http://{url}/mail/default/send
  */
 $app->post('/mail/default/send', function () use ($app) {
 	return include "mail_send/default.php";
