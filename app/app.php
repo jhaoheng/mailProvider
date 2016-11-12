@@ -16,7 +16,7 @@ $app->get('/hello', function() use ($app){
 	- body(json) => { 	
 						"company" : "default",
 						"emails" : ["{your email address}"],
-						"mailType" : "default",
+						"mailType" : "index",
     					"mailViewArg" : {"text" : "Hi , this is a default set"}
     				}
 	- curl -X POST http://{url}/mail/default/send

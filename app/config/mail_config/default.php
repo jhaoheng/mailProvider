@@ -17,7 +17,7 @@ return new \Phalcon\Config(array(
     ),
     // mail_type => title
     'subject' => array(
-        'default' => 'Mail from mail provider',
+        'index' => 'Mail from mail provider',
     ),
 ));
 ?>
