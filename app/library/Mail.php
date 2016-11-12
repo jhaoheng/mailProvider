@@ -23,7 +23,7 @@ class Mail extends Component
 	 */
 	public function getTemplate($companyFolder, $tmplate_name, $params)
 	{
-		$file = 'emailTemplates/'.$companyFolder.'/'.$tmplate_name.'.phtml';
+		$file = APP_PATH.'/views/emailTemplates/'.$companyFolder.'/'.$tmplate_name.'.phtml';
 		if (!is_file($file)) {
 			return $this->view->render('404');
 		}
@@ -42,7 +42,6 @@ class Mail extends Component
 	{
 
 		$template = $this->getTemplate($mailSettings['company'],$mailType, $params);
-
 
 		$mail_subject = !empty($mailSettings['subject'][$mailType]) ? $mailSettings['subject'][$mailType] : 'No find Title';
 		$mail_to = $to;
