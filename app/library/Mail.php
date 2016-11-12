@@ -25,7 +25,7 @@ class Mail extends Component
 	{
 		$file = APP_PATH.'/views/emailTemplates/'.$companyFolder.'/'.$tmplate_name.'.phtml';
 		if (!is_file($file)) {
-			return $this->view->render('404');
+			return $this->view->render('mailTypeError');
 		}
 		return $this->view->render('emailTemplates/'.$companyFolder.'/'.$tmplate_name, $params);
 	}
