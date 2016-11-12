@@ -3,6 +3,7 @@
 $authorization = $app->request->getHeader("authmailprovider");
 
 if ($authorization!="test") {
+	echo "Error Auth";
 	return;
 }
 
