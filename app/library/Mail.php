@@ -23,6 +23,10 @@ class Mail extends Component
 	 */
 	public function getTemplate($companyFolder, $tmplate_name, $params)
 	{
+		$file = 'emailTemplates/'.$companyFolder.'/'.$tmplate_name.'.phtml';
+		if (!is_file($file)) {
+			return $this->view->render('404');
+		}
 		return $this->view->render('emailTemplates/'.$companyFolder.'/'.$tmplate_name, $params);
 	}
 
