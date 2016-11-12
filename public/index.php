@@ -2,6 +2,7 @@
 
 use Phalcon\Di\FactoryDefault;
 use Phalcon\Mvc\Micro;
+use Phalcon\Http\Response as Response;
 
 error_reporting(E_ALL);
 
