@@ -8,14 +8,14 @@ if ($authorization!="test") {
 
 $jsonRawBody = $app->request->getJsonRawBody();
 
-$company = strtolower($jsonRawBody->company);
+$mailConfig = strtolower($jsonRawBody->mailConfig);
 $emails = $jsonRawBody->emails;
 $mailType = strtolower($jsonRawBody->mailType);
 $mailViewArg = json_decode(json_encode($jsonRawBody->mailViewArg), true);
 
 
-if (is_file(APP_PATH.'/config/mail_config/'.$company.'.php')) {
-	$mailSetting = include APP_PATH.'/config/mail_config/'.$company.'.php';
+if (is_file(APP_PATH.'/config/mail_config/'.$mailConfig.'.php')) {
+	$mailSetting = include APP_PATH.'/config/mail_config/'.$mailConfig.'.php';
 }
 else
 	$mailSetting = include APP_PATH.'/config/mail_config/default.php';

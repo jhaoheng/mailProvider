@@ -14,13 +14,13 @@ $app->get('/hello', function() use ($app){
  * default company 
 	- header => authmailprovider : {set in mail_send/default.php}
 	- body(json) => { 	
-						"company" : "default",
+						"mailConfig" : "default",
 						"emails" : ["{your email address}"],
 						"mailType" : "index",
     					"mailViewArg" : {"text" : "Hi , this is a default set"}
     				}
 	- curl -X POST -H "authmailprovider : test" -d '{
-	    "company" : "default",
+	    "mailConfig" : "default",
 	    "emails" : [
 	        "xxxxxx@gmail.com"
 	    ],
