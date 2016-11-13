@@ -1,5 +1,9 @@
 # readme
 
+## env
+
+1. base on phalcon (support 2.x after)
+
 ## first try
 
 1. `git clone git@github.com:jhaoheng/mailProvider.git`
