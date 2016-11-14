@@ -3,6 +3,9 @@
 use Phalcon\Http\Response;
 use Phalcon\HTTP\Request;
 
+$app->get('/', function () {
+    echo $this['view']->render('index');
+});
 
 $app->get('/hello', function() use ($app){
 	return "hello";
